@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        .container{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            cursor: pointer;
+            
+        }
+
+        .box-area{
+           
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 15s linear infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate3d(0,0,0,0);
+            }
+            100%{
+                transform: rotate3d(1,1,0,360deg);
+            }
+        }
+        #box{
+            position: absolute;
+            width: 200px;
+            height:200px;
+            border:2px solid white;
+            
+        }
+        .grild-container{
+            height:100%;
+            display:grid;
+            grid-template-areas: '1 2 3';
+            grid-gap:0;
+            padding:0px;
+        }
+        .grild-container>div{
+            border:1px solid white;
+        }
+        
+        .box-front{
+            transform: translate3d(-100px,-100px,100px);
+        }
+        .box-back{
+            transform: translate3d(-100px,-100px,-100px);
+        }
+        .box-right{
+            transform: translateY(-100px) rotateY(90deg);
+        }
+        .box-left{
+            transform: translate3d(-100px,-200px,0px) rotateX(90deg);
+        }
+        .box-top{
+            transform: translate3d(-200px,-100px,0px) rotateY(90deg);
+        }
+        .box-bottom{
+            transform: translateX(-100px) rotateX(90deg);
+        }
+        
+    </style>
+</head>
+<script>
+    function color1(){
+        document.bgColor="red";
+    }
+    function color2(){
+        document.bgColor="rgb(208, 6, 6)";
+    }
+    function color3(){
+        document.bgColor="rgb(240, 131, 131)";
+    }
+    function color4(){
+        document.bgColor="rgb(175, 5, 5)";
+    }
+    function color5(){
+        document.bgColor="rgb(131, 57, 57)";
+    }
+    function color6(){
+        document.bgColor="rgb(101, 4, 4)";
+    }
+    function color7(){
+        document.bgColor="rgb(61, 5, 5)";
+    }
+    function color8(){
+        document.bgColor="rgb(28, 4, 4)";
+    }
+    function color9(){
+        document.bgColor="rgb(12, 12, 12)";
+    }
+    function color10(){
+        document.bgColor="#A0D6B4";
+    }
+    function color11(){
+        document.bgColor="#A2AD9C";
+    }
+    function color12(){
+        document.bgColor="#cdf3b9";
+    }
+    function color13(){
+        document.bgColor="#b7d7a6";
+    }
+    function color14(){
+        document.bgColor="#7FE817";
+    }
+    function color15(){
+        document.bgColor="#57E964";
+    }
+    function color16(){
+        document.bgColor="#16F529";
+    }
+    function color17(){
+        document.bgColor="#36F57F";
+    }
+    function color18(){
+        document.bgColor="#36eda7";
+    }
+    function color19(){
+        document.bgColor="#E8ADAA";
+    }
+    function color20(){
+        document.bgColor="#f3806e";
+    }
+    function color21(){
+        document.bgColor="#f03d25";
+    }
+    function color22(){
+        document.bgColor="rgb(241, 71, 108)";
+    }
+    function color23(){
+        document.bgColor="#ee054f";
+    }
+    function color24(){
+        document.bgColor="#930d37";
+    }
+    function color25(){
+        document.bgColor="#E56E94";
+    }
+    function color26(){
+        document.bgColor="#5b2637";
+    }
+    function color27(){
+        document.bgColor="#FFDDCA";
+    }
+    function color28(){
+        document.bgColor="#ebeaea";
+    }
+    function color29(){
+        document.bgColor="#daf10a";
+    }
+    function color30(){
+        document.bgColor="#09cff1";
+    }
+    function color31(){
+        document.bgColor="rgb(22, 60, 231)";
+    }
+    function color32(){
+        document.bgColor="#ed63c3";
+    }
+    function color33(){
+        document.bgColor="#930d37";
+    }
+    function color34(){
+        document.bgColor="#232223";
+    }
+    function color35(){
+        document.bgColor="#5b2637";
+    }
+    function color36(){
+        document.bgColor="#f49b67";
+    }
+    function color37(){
+        document.bgColor="#84b9ed";
+    }
+    function color38(){
+        document.bgColor="#8e1c0b";
+    }
+    function color39(){
+        document.bgColor="#63f53e";
+    }
+    function color40(){
+        document.bgColor="rgb(240, 85, 7)";
+    }
+    function color41(){
+        document.bgColor="#cc6988";
+    }
+    function color42(){
+        document.bgColor="#3d5e68";
+    }
+   
+    function color43(){
+        document.bgColor="#8932eb";
+    }
+    function color44(){
+        document.bgColor="#bd82db";
+    }
+    function color45(){
+        document.bgColor="#6b371a";
+    }
+    function color46(){
+        document.bgColor="#E8ADAA";
+    }
+    function color47(){
+        document.bgColor="#f3806e";
+    }
+    function color48(){
+        document.bgColor="#f03d25";
+    }
+    function color49(){
+        document.bgColor="rgb(241, 71, 108)";
+    }
+    function color50(){
+        document.bgColor="#ee054f";
+    }
+    function color51(){
+        document.bgColor="#930d37";
+    }
+    function color52(){
+        document.bgColor="#E56E94";
+    }
+    function color53(){
+        document.bgColor="#5b2637";
+    }
+    function color54(){
+        document.bgColor="#FFDDCA";
+    }
+</script>
+<body>
+    <br><br><br>
+    <h3 align="center"> Click on the any color box and get change bgcolor</h3>
+    <div class="container">
+        <div class="box-area">
+            <div class="box-front" id="box">
+               <div class="grild-container bg-front">
+                <div class="gird-items" style="background-color: red;" onclick="color1()"></div>
+                <div class="gird-items" style="background-color: rgb(208, 6, 6);" onclick="color2()"></div>
+                <div class="gird-items" style="background-color: rgb(240, 131, 131);" onclick="color3()"></div>
+                <div class="gird-items" style="background-color: rgb(175, 5, 5);" onclick="color4()"></div>
+                <div class="gird-items" style="background-color: rgb(131, 57, 57);" onclick="color5()"></div>
+                <div class="gird-items" style="background-color: rgb(101, 4, 4);" onclick="color6()"></div>
+                <div class="gird-items" style="background-color: rgb(61, 5, 5);" onclick="color7()"></div>
+                <div class="gird-items" style="background-color: rgb(28, 4, 4);" onclick="color8()"></div>
+                <div class="gird-items" style="background-color: rgb(12, 12, 12);" onclick="color9()"></div>
+               </div>
+            </div>
+            <div class="box-back" id="box">
+                <div class="grild-container bg-back">
+                    <div class="gird-items" style="background-color: #A0D6B4;" onclick="color10()"></div>
+                    <div class="gird-items" style="background-color: #A2AD9C;" onclick="color11()"></div>
+                    <div class="gird-items" style="background-color: #cdf3b9;" onclick="color12()"></div>
+                    <div class="gird-items" style="background-color: #b7d7a6;" onclick="color13()"></div>
+                    <div class="gird-items" style="background-color: #7FE817;" onclick="color14()"></div>
+                    <div class="gird-items" style="background-color: #57E964;" onclick="color15()"></div>
+                    <div class="gird-items" style="background-color: #16F529;" onclick="color16()"></div>
+                    <div class="gird-items" style="background-color: #36F57F;" onclick="color17()"></div>
+                    <div class="gird-items" style="background-color: #36eda7;" onclick="color18()"></div>
+                   </div>
+            </div>
+            <div class="box-right" id="box">
+                <div class="grild-container bg-right">
+                    <div class="gird-items" style="background-color: #E8ADAA;" onclick="color19()"></div>
+                    <div class="gird-items" style="background-color: #f3806e;" onclick="color20()"></div>
+                    <div class="gird-items" style="background-color: #f03d25;" onclick="color21()"></div>
+                    <div class="gird-items" style="background-color: rgb(241, 71, 108);" onclick="color22()"></div>
+                    <div class="gird-items" style="background-color: #ee054f;" onclick="color23()"></div>
+                    <div class="gird-items" style="background-color: #930d37;" onclick="color24()"></div>
+                    <div class="gird-items" style="background-color: #E56E94;" onclick="color25()"></div>
+                    <div class="gird-items" style="background-color: #5b2637;" onclick="color26()"></div>
+                    <div class="gird-items" style="background-color: #FFDDCA;" onclick="color27()"></div>
+                   </div>
+            </div>
+            <div class="box-left" id="box">
+                <div class="grild-container bg-left">
+                    <div class="gird-items" style="background-color: #ebeaea;" onclick="color28()"></div>
+                    <div class="gird-items" style="background-color: #daf10a;" onclick="color29()"></div>
+                    <div class="gird-items" style="background-color: #09cff1;" onclick="color30()"></div>
+                    <div class="gird-items" style="background-color: rgb(22, 60, 231)" onclick="color31()"></div>
+                    <div class="gird-items" style="background-color: #ed63c3;" onclick="color32()"></div>
+                    <div class="gird-items" style="background-color: #930d37;" onclick="color33()"></div>
+                    <div class="gird-items" style="background-color: #232223;" onclick="color34()"></div>
+                    <div class="gird-items" style="background-color: #5b2637;" onclick="color35()"></div>
+                    <div class="gird-items" style="background-color: #f49b67;" onclick="color36()"></div>
+                </div>
+            </div>
+            <div class="box-top" id="box">
+                <div class="grild-container bg-top">
+                    <div class="gird-items" style="background-color: #84b9ed;" onclick="color37()"></div>
+                    <div class="gird-items" style="background-color: #8e1c0b;" onclick="color38()"></div>
+                    <div class="gird-items" style="background-color: #63f53e;" onclick="color39()"></div>
+                    <div class="gird-items" style="background-color: rgb(240, 85, 7);" onclick="color40()"></div>
+                    <div class="gird-items" style="background-color: #cc6988;" onclick="color41()"></div>
+                    <div class="gird-items" style="background-color: #3d5e68;" onclick="color42()"></div>
+                    <div class="gird-items" style="background-color: #8932eb;" onclick="color43()"></div>
+                    <div class="gird-items" style="background-color: #bd82db;" onclick="color44()"></div>
+                    <div class="gird-items" style="background-color: #6b371a;" onclick="color45()"></div>
+                   </div>
+            </div>
+            <div class="box-bottom" id="box">
+                <div class="grild-container bg-bottom">
+                    <div class="gird-items" style="background-color: #E8ADAA;" onclick="color46()"></div>
+                    <div class="gird-items" style="background-color: #f3806e;" onclick="color47()"></div>
+                    <div class="gird-items" style="background-color: #f03d25;" onclick="color48()"></div>
+                    <div class="gird-items" style="background-color: rgb(241, 71, 108);" onclick="color49()"></div>
+                    <div class="gird-items" style="background-color: #ee054f;" onclick="color50()"></div>
+                    <div class="gird-items" style="background-color: #930d37;" onclick="color51()"></div>
+                    <div class="gird-items" style="background-color: #E56E94;" onclick="color52()"></div>
+                    <div class="gird-items" style="background-color: #5b2637;" onclick="color53()"></div>
+                    <div class="gird-items" style="background-color: #FFDDCA;" onclick="color54()"></div>
+                   </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
