@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fill in the blank</title>
+</head>
+<style>
+    input[type="text"]{
+        border:none;
+        border-bottom: 2px solid black;
+    }
+    span{
+        cursor: pointer;
+    }
+</style>
+<script>
+    
+</script>
+<body> (Q.1) What is the fullform of PNG image?<br>
+    <input type="radio" id="option1" name="blank1" data-correct="true" value="Portable Network Graphics">Portable Network Graphics <br>
+    <input type="radio" id="option2" name="blank1" value="Joint Photographic Expert Group">Joint Photographic Expert Group <br>
+    <input type="radio" id="option3" name="blank1" value="Graphics Interchange Format">Graphics Interchange Format <br>
+      <br><br> 
+    
+    
+
+    (Q.2) ASP stand for <br>
+    <input type="radio" id="option4" name="blank2" value="Active service page">Active service page <br>
+    <input type="radio" id="option5" name="blank2" value="Action server page">Action server page <br>
+    <input type="radio" id="option6" name="blank2" data-correct="true" value="Active server page"> Active server page <br>
+    <input type="radio" id="option7" name="blank2" value="Activity server page"> Activity server page <br>
+       
+    <br><br>
+    
+
+    (Q.3) is the text on clicking of which other web pages are opened. <br>
+    <input type="radio" id="option8" name="blank3" value="Markup">Markup <br>
+    <input type="radio" id="option9" name="blank3" data-correct="true" value="Hypertext"> Hypertext <br>
+    <input type="radio" id="option10" name="blank3" value="Hyperlink">Hyperlink <br>
+    <input type="radio" id="optio11" name="blank3" value="Link">Link <br>
+       
+    <br><br>
+    
+
+    (Q.4) is not a Browser. <br>
+    <input type="radio" id="option12" name="blank4" value="Netscape Navigator">Netscape Navigator <br>
+    <input type="radio" id="option13" name="blank4" value="Mozilla"> Mozilla <br>
+    <input type="radio" id="option14" name="blank4" data-correct="true" value="Windows Explorer">Windows Explorer <br>
+    <input type="radio" id="option15" name="blank4" value="Google Chrome">Google Chrome <br>
+       
+    <br><br>
+    
+     (Q.5)  One of the most powerful parts of a web page is the<br>
+     <input type="radio" id="option12" name="blank5" value="Button">Button <br>
+    <input type="radio" id="option13" name="blank5" value="Link"> Link <br>
+    <input type="radio" id="option14" name="blank5" data-correct="true" value="Form">Form <br>
+    <input type="radio" id="option15" name="blank5" value="Ribbon">Ribbon <br>
+       
+    <br><br>
+    
+
+          (Q.6)  CGI stands for <br> 
+         <input type="radio" id="option16" name="blank6" data-correct="true"  value="Common Gateway Interface">Common Gateway Interface <br>
+         <input type="radio" id="option17" name="blank6" value="Come Gateway Entry"> Come Gateway Entry <br>
+         <input type="radio" id="option18" name="blank6" value="Course Gateway Interface">Course Gateway Interface <br>
+         <input type="radio" id="option19" name="blank6" value="Course Gateway Internet">Course Gateway Internet <br>
+            
+         <br><br>
+         
+         
+
+     (Q.7)is used to provide a list of items with associated
+     definitations . <br>
+    
+     <input type="radio" id="option16" name="blank7"  data-correct="true" value="DL">DL <br>
+     <input type="radio" id="option17" name="blank7" value="DD"> DD <br>
+     <input type="radio" id="option18" name="blank7" value="LL">LL <br>
+     <input type="radio" id="option19" name="blank7" value="DT">DT <br>
+        
+     <br><br>
+     
+    
+
+     (Q.8)view is used t verify that links are correct. <br><br>
+     <input type="radio" id="option16" name="blank8" value="Folder">Folder <br>
+     <input type="radio" id="option17" name="blank8" value="Page"> Page <br>
+     <input type="radio" id="option18" name="blank8"  data-correct="true" value="Report">Report <br>
+     <input type="radio" id="option19" name="blank8" value="File">File <br>
+        
+     <br><br>
+    
+     (Q.9)links appears as a miniature version of a larger Image.<br>
+     
+     <input type="radio" id="option16"  name="blank9" value="Image">Image <br>
+     <input type="radio" id="option17"  name="blank9"  data-correct="true" value="Thumbnail">Thumbnail <br>
+     <input type="radio" id="option18"  name="blank9" value="Page">Page <br>
+     <input type="radio" id="option19"  name="blank9" value="Document">Document <br>
+        
+     <br><br>
+
+     (Q.10) are among today’s most popular browser for viewing web pages
+     and for surfing the internet.<br>
+    
+     <input type="radio" id="option16" name="blank10"  data-correct="true" value="Internet Explorer">Internet Explorer <br>
+     <input type="radio" id="option17" name="blank10" value="Wordpad">Wordpad <br>
+     <input type="radio" id="option18" name="blank10" value="Notepage">Notepage <br>
+     <input type="radio" id="option19" name="blank10" value="Document">Document <br>
+        
+     <br><br>
+    
+<button type="button" onclick="right()">Check Answer</button>  
+    <br><br>
+    <script>
+        function right() {
+        const no_of_questions = 10
+        const input_name = 'blank'
+        var error = false;
+        for (i = 1 ; i <= no_of_questions ; i++) 
+        {
+            var radio_button = document.querySelector('input[name="'+ input_name + i+'"]:checked');
+            if (!radio_button){
+                error = true;
+                break ;  
+            }
+            if(!radio_button.getAttribute('data-correct')){
+                error = true;
+                break;
+             }
+            
+
+       }
+       if(error){
+        alert("all answer are not correct");
+    }
+    else{
+        alert("all answer are correct");
+
+    }
+}
+    </script>
+</body>
+
+</html>
