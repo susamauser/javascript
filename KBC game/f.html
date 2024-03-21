@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        width:98%;
+        height:80vh;
+        background-image: url(kbc.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       .container{
+        width:70%;
+        height:auto;
+        position: absolute;
+        left: 20%;
+        top:50%;
+        }
+       
+    .box{
+       
+        padding:8px;
+        border:2px solid white;
+        background-image: linear-gradient(rgb(11, 11, 160), rgb(16, 136, 184));
+       color:white;
+        font-family: lato;
+        font-size: 1.26rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button{
+        padding:10px 40px;
+        background-color: green;
+        border: none;
+        border-radius: 3px;
+        color:white;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+       margin-left: 150px; 
+    }
+    td{
+        width:50%;
+    }
+</style>
+<script>
+    function right(){
+        document.getElementById("right").style.background="green";
+    }
+    function wrong(element){
+        
+        element.style.background="red";
+        document.getElementById("right").style.background="green";
+
+        alert("Your answer is wrong")
+        
+       
+    }
+    function NextQuestion(){
+        
+        location.href ="g.html";
+    }
+</script>
+<body>
+
+   
+    
+        <table class="container" cellspacing="5px">
+            <tr>
+                <td align="center" colspan="2" class="box"> (Q.6) Insert Picture from file button is available on ____________ toolbar.</td>
+            </tr>
+            <tr>
+                <td class="box" id="right" onclick="right()">(C)  Standard</td>
+                <td class="box" onclick="wrong(this)">(D) Wordart</td>
+            </tr>
+            <tr>
+                <td class="box" onclick="wrong(this)">(A) Drawing</td>
+                <td class="box" onclick="wrong(this)">(B)  Formatting</td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+                <tr>
+                <th align="center" collspan="2">
+                <button onclick="NextQuestion()">Next Question</button>
+                </th>
+                </tr>
+        </table>
+            
+        
+  
+    
+</body>
+</html>
