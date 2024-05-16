@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+</head>
+
+<style>
+    body{
+        width:100%;
+        height:80vh;
+        background-image: url(kbc.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       .container{
+        width:30%;
+        height:400px;
+        
+        position: absolute;
+        left: 20%;
+        display: block;
+        left:35%;
+        top:35%;
+        
+       
+    }
+       
+    .box{
+        width:100%;
+        height:15px;
+        padding:10px;
+        border:2px solid white;
+        background-image: linear-gradient(rgb(11, 11, 160), rgb(16, 136, 184));
+       
+        color:white;
+        font-family: lato;
+        font-size: 1.26rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button{
+        padding:10px 40px;
+        background-color: green;
+        border: none;
+        border-radius: 3px;
+        color:white;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 120px;
+    }
+</style>
+<script>
+   /* function right(){
+        document.getElementById("right").style.background="green";
+    }
+    function wrong(){
+        alert("Your answer is wrong")
+        document.getElementById("wrong").style.background="red";
+    }
+    */
+    function Answer(){
+       document.getElementById("right").style.background="green"; 
+       document.getElementById("left").innerHTML="Next question";
+       location.href = "b.html";
+    }
+</script>
+<body>
+    <div class="container">
+        
+            <div class="box">(Q.1)&nbsp;&nbsp;&nbsp;&nbsp; Who made Computer?</div><br>
+                <div class="box" id="right" onclick="right()">(A)&nbsp;&nbsp;&nbsp;&nbsp;Charles Babbage </div><br>
+                <div class="box"  onclick="wrong()">(B)&nbsp;&nbsp;&nbsp;&nbsp;Alan Turing</div><br>
+                <div class="box" onclick="wrong()">(C)&nbsp;&nbsp;&nbsp;&nbsp;John von Neumann</div><br>
+                <div class="box" onclick="wrong()">(D)&nbsp;&nbsp;&nbsp;&nbsp;James Gosling</div><br><br>
+                <button align="center"  id="left" onclick="Answer()">Answer</button>
+
+        
+    </div>
+    
+</body>
+</html>
