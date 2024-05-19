@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .buttonbox{
+        height:150px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .filter-btn{
+        padding:8px 20px;
+        border:none;
+        background: rgb(120, 6, 6);
+        color:white;
+        margin:10px;
+        font-size: 1.05rem;
+        border-radius:5px ;
+        cursor: pointer;
+    }
+    .filter-btn:hover{
+        background:rgb(242, 233, 150);
+        color:black
+    }
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        
+    }
+    .gallery-item{
+        width:400px;
+        height:400px;
+        background-color:rgb(139, 8, 8);
+        color:white;
+        margin-left: 40px;
+        margin-top: 10px;
+        padding: 20px;
+        font-family: Verdana;
+    }
+    p,h1{
+        margin-top: 10px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .read{
+        padding:8px 20px;
+        border:1px solid white;
+        background: transparent;
+        color:white;
+        font-size: 1.05rem;
+        border-radius:5px ;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-left: 190px;
+    }
+    img{
+        width:150px;
+        height:auto;
+        margin-left: 100px;
+        margin-top: 20px;
+        border-radius: 5px;        
+    }
+</style>
+<body>
+    <div class="buttonbox">
+        <button class="filter-btn"  data-filter="all"> All</button>
+        <button class="filter-btn"  data-filter="Recipes"> Recipes</button>
+        <button class="filter-btn" data-filter="Tips"> Tips</button>
+    </div>
+        <div class="box">
+            <div class="gallery-item all Recipes"><h1>Lorem ipum</h1>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaDEBYCuZTq1HlY4zSGa-Xf6XZYqLQYEgx4A&usqp=CAU" alt="food images">
+                <p>In publihing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                </p>
+                <button class="read">Read more</button>
+            </div>
+            <div class="gallery-item Recipes"><h1>Lorem ipsum</h1>
+                <img src="https://images.ctfassets.net/awb1we50v0om/2Spf80TME2zIhLqsi3Zxv9/919421a45f3260ee426c99c35235f1c8/Plates03__3__copy3.jpg?w=1920&fm=webp&q=70" alt="food images">
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                </p>
+                <button class="read Recipes">Read more</button>
+            </div>
+            <div class="gallery-item Recipes"><h1>Lorem ipsum</h1>
+                <img src="https://pinchofyum.com/wp-content/uploads/Crispy-Rice-Salad-4-800x800.jpg" alt="food images">
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                </p>
+                <button class="read">Read more</button>
+            </div>
+            <div class="gallery-item Tips"><h1>Lorem ipsum</h1>
+                <img src="https://live.staticflickr.com/65535/48306583902_0c377573b5_z.jpg" alt="food images">
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                </p>
+                <button class="read">Read more</button>
+            </div>
+           
+        </div>
+    
+    
+    <script>
+       document.addEventListener('DOMContentLoaded', function(){
+            const buttonbox = document.querySelectorAll('.filter-btn');
+            const gallery_items = document.querySelectorAll('.gallery-item');
+
+            buttonbox.forEach( btn => {
+                btn.addEventListener('click',function(){
+                    const filter =  btn.dataset.filter;
+
+            gallery_items.forEach(item => {
+
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.display = 'block';
+                    } else {
+                    item.style.display = 'none';
+                        }
+                    })
+                });
+            })
+      });
+    </script>
+</body>
+</html>
