@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find next number</title>
+</head>
+<body>
+    
+    <script>
+       function nextnumber(series){
+            let n = series.length;
+            if(n % 2== 0)
+                {
+                let next = series[n - 2];
+                return next + 1;
+                }
+            else
+                {
+                let next = series[n - 2];
+                return next + 1;
+                }
+       }
+       let  series = [7, 10, 8, 11, 9, 12]
+       let number = nextnumber(series)
+        console.log(" the next number is" , number)
+    </script>
+</body>
+</html>
