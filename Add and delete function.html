@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add & delete function</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background: blue;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .container{
+        width:700px;
+        height:auto;
+        background: white;
+        border-radius: 8px;
+        position:relative;
+        top:40%;
+        padding: 10px 0px;
+        
+
+    }
+    .newtask{
+        height:70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .newtask input{
+        width:450px;
+        height:40px;
+        outline-color:blue ;
+        border:1px solid black;
+        font-size: 1.05rem;
+        font-family: 'poppins',sans-serif;
+        padding: 0px 10px;
+        border-radius: 7px;
+    }
+    .newtask .btn{
+        font-size: 1.05rem;
+        font-family: 'poppins',sans-serif;
+        background: blue;
+        color:white;
+        border:none;
+        padding:11px 30px;
+        border-radius:7px ;
+        margin:0px 20px;
+        cursor: pointer;
+    }
+    .newtask .btn:active{
+        padding:8px 25px;
+        margin:0px 25px;
+    }
+    /* .addtask{
+        height:auto;
+        display: flex;
+        align-items:last baseline ;
+        
+        
+    } */
+    /* .task{
+        width: 100%;
+        height:auto;
+        background: rgb(173, 226, 173);
+        padding:20px;
+        border-radius: 0px 0px 7px 7px;
+    } */
+    .tasks{
+        width: 430px;
+        height:auto;
+        padding:2px 20px;
+        margin-left:50px ;
+        background: rgb(173, 226, 173);
+        border-radius: 7px;
+        border: 1px solid rgb(108, 153, 108);
+        font-size: 1.05rem;
+        font-family: 'poppins',sans-serif;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tasks .delete{
+        padding:8px 10px;
+        color:white;
+        background: blue;
+        border:none;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+    <div class="container">
+        <div class="newtask">
+            <input type="text" placeholder="Enter your task...">
+            <button class="btn">Add</button>
+        </div>
+        <div class="addtask">
+            <div class="task">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.btn').onclick = function(){
+            if(document.querySelector('.newtask input').value.length == 0){
+                alert("Enter your task done");
+            }
+            else{
+                document.querySelector('.task').innerHTML += 
+                    `<div class="tasks">
+                        <span class="add">
+                            ${document.querySelector('.newtask input').value}
+                        </span>
+                        <button class="delete"><i class="fa fa-trash-o" style="font-size:20px"></i></button>
+                    </div>`;
+
+
+
+                    var current_active = document.querySelectorAll('.delete');
+                    for(i = 0; i < current_active.length;i++){
+                        current_active[i].onclick = function(){
+                            this.parentNode.remove();
+                        }
+                    }
+            }
+        }
+
+    </script>
+</body>
+</html>
