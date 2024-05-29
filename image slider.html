@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fdgvfdbcf</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+    *{
+        padding:0px;
+        margin: 0%;
+    }
+    .swiper {
+        position: relative;
+        top:20px;
+        width:90%;
+        height:80vh;
+  /* width:calc(100vw - 10px) ;
+  height: calc(100vh - 20px) ; */
+  color:#EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid blue;
+    margin: 50px;
+    border-radius: 20px;
+}
+.swiper-wrapper{
+    width:90%;
+    height:70vh;
+    background: yellow;
+  
+   
+}
+.swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+</style>
+<body>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="C:\Users\ebrah\OneDrive\Desktop\yadav\image slider\1.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="C:\Users\ebrah\OneDrive\Desktop\yadav\image slider\2.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="C:\Users\ebrah\OneDrive\Desktop\yadav\image slider\3.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="C:\Users\ebrah\OneDrive\Desktop\yadav\image slider\4.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="C:\Users\ebrah\OneDrive\Desktop\yadav\image slider\5.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="C:\Users\ebrah\OneDrive\Desktop\yadav\image slider\3.jpg" alt="">
+                </div>
+            </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div>
+      </div> -->
+
+      
+      <script>
+        //  initialize of slider 
+          const swiper = new Swiper('.swiper', {
+                freeMode: true,
+                loop: true,
+                pagination: {
+                    el: '.slideChange',
+                },
+                autoplay: {
+                delay: 1000,
+                    },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                // },
+
+                zoom: {
+                maxRatio: 1.2,
+                minRation: 0.2,  
+                },
+                
+                });
+                swiper.on("slideChangeTransitionStart", swiper.zoom.out);
+// And when transition has finished scale it up.
+            swiper.on("slideChangeTransitionEnd", swiper.zoom.in);
+                
+      </script>  
+</body>
+</html>
